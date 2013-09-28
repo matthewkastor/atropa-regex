@@ -1,6 +1,6 @@
 {
     "name": "atropa-regex",
-    "version": "2013.09.27-2334",
+    "version": "2013.09.27-2431",
     "description": "Container for JavaScript regular expressions and regex functions.",
     "main": "./src/atropa-regex.js",
     "directories": {
@@ -43,6 +43,6 @@
         }
     ],
     "dependencies": {
-        "atropa-header": "*"
+        "atropa-header": "git+https://github.com/matthewkastor/atropa-header.git#master"
     }
 }
