@@ -1,6 +1,6 @@
 {
   "name": "atropa-regex",
-  "version": "2014.1.1",
+  "version": "2014.1.2",
   "description": "Container for JavaScript regular expressions and regex functions.",
   "main": "./src/atropa-regex.js",
   "directories": {
