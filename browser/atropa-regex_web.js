@@ -168,7 +168,6 @@ var atropa = require('atropa-header');
  *  ☭ Hial Atropa!! ☭
  * @version 20120909
  * @namespace Container for regex functions.
- * @see <a href="../../../AtropaToolboxTests.html?spec=atropa.regex">tests</a>
  */
 atropa.regex = {};
 /**
