@@ -22,18 +22,27 @@ var atropa = require('atropa-header');
  */
 atropa.regex = {};
 /**
- * Regex patterns.
+ * Regex patterns
  * @author <a href="mailto:matthewkastor@gmail.com">
  *  Matthew Christopher Kastor-Inare III </a><br />
  *  ☭ Hial Atropa!! ☭
  * @namespace Regex patterns.
  */
 atropa.regex.patterns = {
-    /** finds repeated words and phrases */
+    /**
+     * finds repeated words and phrases
+     * @type RegExp
+     */
     repeatedWords : /(\b.{3,}\b)\s*(\1)/g,
-    /** finds paragraph breaks */
+    /**
+     * finds paragraph breaks
+     * @type RegExp
+     */
     paragraphBreaks : /(\r\n\r\n|\n\n|\r\r)/g,
-    /** finds line breaks */
+    /**
+     * finds line breaks
+     * @type RegExp
+     */
     lineBreaks : /(\r\n|\r|\n)/g
 };
 /**

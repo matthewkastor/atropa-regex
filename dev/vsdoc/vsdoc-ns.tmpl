@@ -8,12 +8,15 @@
     <if test="data.memberOf">window.{+data.memberOf+} = window.{+data.memberOf+} || {};</if>
 
     window.{+data.alias+} = {
-        /// <summary>{+vsdocDesc(data.comment.getTag("constructs").toString(), 2)+}</summary>{#
+        /// <summary>{+vsdocDesc(data.comment.getTag("constructs").toString() || vsdocDesc(data.desc), 2)+}</summary>{#
       #}<if test="data.params.length"><for each="param" in="data.params">
-        /// <param name="{+param.name+}" type="{+param.type+}">{+vsdocDesc(param.desc, 2)+}</param></for></if>{#
+        /// <param name="{+param.name+}" type="{+param.type+}">{+vsdocDesc(param.desc, 2)+}</param></for></if>
+        /// <returns type="{+data.alias+}"/>{#
       #}<for each="property" in="data.properties">
-        /// <field name="{+property.name+}" type="{+property.type+}">{+vsdocDesc(property.desc, 2)+}</field></for>
-        /// <returns type="{+data.alias+}"/>
+      
+        /// <field name="{+property.name+}" type="{+property.type+}">{+vsdocDesc(property.desc, 2)+}</field>
+        {+property.name+} : <if test="property.type">new {+property.type+}(){#
+      #}<else />{}</if><if test="(!$property_last) || ($property_last && data.properties.length > 0 && data.methods.length > 0)">, </if></for>
         {+callTemplate("vsdoc-methods.tmpl", data)+}
     };
 

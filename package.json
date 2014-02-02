@@ -1,6 +1,6 @@
 {
   "name": "atropa-regex",
-  "version": "2014.1.2",
+  "version": "2014.2.1",
   "description": "Container for JavaScript regular expressions and regex functions.",
   "main": "./src/atropa-regex.js",
   "directories": {
@@ -21,7 +21,7 @@
     "lint": "atropa-jslint ./src/atropa-regex.js",
     "srcFormat": "atropa-jsformatter ./src/atropa-regex.js ./src/atropa-regex.js",
     "pretest": "node dev/browserify.js",
-    "buildVsdocs": "jsdoc-toolkit -v -d=./docs/vsdoc/ -t=./dev/vsdoc/ -r -s node_modules/atropa-header/src/ src/"
+    "buildVsdocs": "jsdoc-toolkit -v -d=./docs/vsdoc/ -t=./node_modules/jsdoc-toolkit/templates/vsdoc/ -r -s node_modules/atropa-header/src/ src/"
   },
   "homepage": "https://github.com/matthewkastor/atropa-regex/",
   "bugs": "https://github.com/matthewkastor/atropa-regex/issues",
